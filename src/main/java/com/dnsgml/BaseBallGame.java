@@ -72,6 +72,8 @@ public class BaseBallGame {
         if (b > 0) {
             result += b + "B";
         }
+
+        if(result == "") result = "(null)";
         return result;
     }
 }
