@@ -1,56 +1,29 @@
 package com.dnsgml;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.Set;
 
 public class BaseBallGame {
-    public static void main(String[] args) {
-        // 랜덤 숫자 생성 (중복X)
-        String target = generateRandomNumbers();
+    private String target;
+    private Scanner scanner;
 
-        Scanner scanner = new Scanner(System.in);
+    public BaseBallGame() {
+        this.target = NumberGenerator.generateRandomNumbers();
+        this.scanner = new Scanner(System.in);
+    }
 
+    public void play() {
         System.out.println("INPUT:");
         String input = scanner.next();
 
-        // 숫자 비교
         String result = compareNumbers(target, input);
         System.out.println("OUTPUT: " + result);
         System.out.println("실제 값: " + target);
     }
 
-    /**
-     * 랜덤 숫자 생성 (중복X)
-     * @return
-     */
-    public static String generateRandomNumbers() {
-        Random random = new Random();
-        Set<Integer> numSet = new HashSet<>();
-
-        // 3자리 숫자 생성 (중복X)
-        while (numSet.size() < 3) {
-            int num = random.nextInt(9) + 1;
-            numSet.add(num);
-        }
-
-        String result = "";
-        for (int num : numSet) {
-            result += num;
-        }
-        return result;
-    }
-
-    /**
-     * 숫자 비교
-     * @param target
-     * @param input
-     * @return
-     */
-    public static String compareNumbers(String target, String input) {
+    private String compareNumbers(String target, String input) {
         int s = 0;
         int b = 0;
 
@@ -73,7 +46,30 @@ public class BaseBallGame {
             result += b + "B";
         }
 
-        if(result == "") result = "(null)";
+        if (result.equals("")) result = "(null)";
         return result;
+    }
+
+    public static void main(String[] args) {
+        BaseBallGame game = new BaseBallGame();
+        game.play();
+    }
+}
+
+class NumberGenerator {
+    public static String generateRandomNumbers() {
+        Random random = new Random();
+        Set<Integer> numSet = new HashSet<>();
+
+        while (numSet.size() < 3) {
+            int num = random.nextInt(9) + 1;
+            numSet.add(num);
+        }
+
+        StringBuilder result = new StringBuilder();
+        for (int num : numSet) {
+            result.append(num);
+        }
+        return result.toString();
     }
 }
