@@ -1,4 +1,4 @@
-package com.dnsgml;
+package com.dnsgml.admin.web;
 
 import java.util.HashSet;
 import java.util.Random;
@@ -8,6 +8,13 @@ import java.util.Set;
 public class BaseBallGame {
     private String target;
     private Scanner scanner;
+
+    public String getScore( String given, String input ){
+        /// To Do….
+        String result = compareNumbers(given, input);
+
+        return "(INPUT) Given "+given+", Input "+input+" → (OUTPUT) "+result;
+    }
 
     public BaseBallGame() {
         this.target = NumberGenerator.generateRandomNumbers();
