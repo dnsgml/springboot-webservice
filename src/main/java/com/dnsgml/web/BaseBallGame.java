@@ -1,4 +1,4 @@
-package com.dnsgml.admin.web;
+package com.dnsgml.web;
 
 import java.util.HashSet;
 import java.util.Random;

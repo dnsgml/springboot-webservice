@@ -1,4 +1,4 @@
-package com.dnsgml.admin.web.dto;
+package com.dnsgml.web.dto;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

@@ -1,6 +1,6 @@
-package com.dnsgml.admin.web;
+package com.dnsgml.web;
 
-import com.dnsgml.admin.web.dto.HelloResponseDto;
+import com.dnsgml.web.dto.HelloResponseDto;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;

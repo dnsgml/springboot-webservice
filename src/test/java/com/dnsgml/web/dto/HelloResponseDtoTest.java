@@ -1,4 +1,4 @@
-package com.dnsgml.admin.web.dto;
+package com.dnsgml.web.dto;
 
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;

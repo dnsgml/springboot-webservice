@@ -1,4 +1,4 @@
-package com.dnsgml.admin.web;
+package com.dnsgml.web;
 
 
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,4 @@
-package com.dnsgml.admin;
+package com.dnsgml;
 
 
 import org.springframework.boot.SpringApplication;
