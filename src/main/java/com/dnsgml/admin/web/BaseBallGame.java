@@ -11,9 +11,8 @@ public class BaseBallGame {
 
     public String getScore( String given, String input ){
         /// To Do….
-        String result = compareNumbers(given, input);
 
-        return "(INPUT) Given "+given+", Input "+input+" → (OUTPUT) "+result;
+        return compareNumbers(given, input);
     }
 
     public BaseBallGame() {
