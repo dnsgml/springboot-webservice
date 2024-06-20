@@ -3,3 +3,18 @@ spring:
     properties:
       hibernate:
         show_sql: true
+  mustache:
+    charset: UTF-8
+    prefix: classpath:/templates/
+    suffix: .mustache
+
+  h2:
+    console:
+      enabled: true
+
+server:
+  servlet:
+    encoding:
+      force-response: true
+
+
